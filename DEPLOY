@@ -1,0 +1,14 @@
+https://www.youtube.com/watch?v=HjRI3OjA2Ws
+
+1 get server
+2 install dependancies: npm i -g typescript @angular/cli
+3 clone your project from github git clone http://github.com/project1
+4 cd project1
+5 enable firewall for angular : ufw allow 4200
+6 run project on: ng serve --host 0.0.0.0
+7 install server: npm i -g http-server
+8 compile project: ng build --aot
+9 pipe out put to log file: http-server dist/ -p 80./output.log &
+open ip 95.35.478.254
+10 to kill project get pid: ps -eaf | grep http-server
+11 kill pid
