@@ -12,3 +12,27 @@ https://www.youtube.com/watch?v=HjRI3OjA2Ws
 open ip 95.35.478.254
 10 to kill project get pid: ps -eaf | grep http-server
 11 kill pid
+
+////// or easy
+https://angular.io/guide/deployment
+
+Start with the development build
+
+content_copy
+ng build
+Copy everything within the output folder (dist/ by default) to a folder on the server.
+If you copy the files into a server sub-folder, append the build flag, --base-href and set the <base href> appropriately.
+
+
+For example, if the index.html is on the server at /my/app/index.html, set the base href to <base href="/my/app/"> like this.
+
+content_copy
+ng build --base-href=/my/app/
+You'll see that the <base href> is set properly in the generated dist/index.html.
+
+If you copy to the server's root directory, omit this step and leave the <base href> alone.
+
+Learn more about the role of <base href> below.
+
+Configure the server to redirect requests for missing files to index.html. Learn more about server-side redirects below.
+This is not a production deployment. It's not optimized and it won't be fast for users. It might be good enough for sharing your progress and ideas internally with managers, teammates, and other stakeholders.
